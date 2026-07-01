@@ -1,65 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration</title>
+
     <link rel="stylesheet" href="style.css">
-
-
- <link rel="icon" type="image/png" href="./images/hat.png">   
-
-
-
-
-
+    <link rel="icon" type="image/png" href="./images/hat.png">
+     <link rel="icon" type="image/png" href="./images/phoenix.png">
 </head>
+
 <body>
 
-    <h1>Student Registration Form</h1>
+    <h1>Aviation Training Academy</h1>
 
-    <a href="index.html">Home</a> |
-    <a href="courses.html">Courses</a> |
-    <a href="register.html">Register</a> |
-    <a href="contact.html">Contact Us</a>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="register.html">Register</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
 
-    <hr>
+    <div class="container">
 
-    <form>
+        <h2>Student Registration Form</h2>
 
-        <label>Full Name:</label><br>
-        <input type="text"><br><br>
+        <p>
+            Complete the form below to apply for admission into one of our aviation
+            training programs. Our admissions team will contact you after reviewing
+            your application.
+        </p>
 
-        <label>Email:</label><br>
-        <input type="email"><br><br>
+        <form action="#" method="post">
 
-        <label>Age:</label><br>
-        <input type="number"><br><br>
+            <label for="fullname">Full Name</label>
+            <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="Enter your full name"
+                required>
 
-        <label>Gender:</label><br>
+            <label for="email">Email Address</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                required>
 
-        <input type="radio" name="gender"> Male
-        <input type="radio" name="gender"> Female
+            <label for="phone">Phone Number</label>
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="e.g. +254 700 123 456"
+                required>
 
-        <br><br>
+            <label for="age">Age</label>
+            <input
+                type="number"
+                id="age"
+                name="age"
+                min="17"
+                max="60"
+                required>
 
-        <label>Select Course:</label><br>
+            <label>Gender</label>
 
-        <select>
-            <option>Private pilot license</option>
-            <option>Commercial pilot license</option>
-            <option>Air transport pilot license</option>
-        </select>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
 
-        <br><br>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
 
-        <label>Comments:</label><br>
+            <br><br>
 
-        <textarea rows="5" cols="30"></textarea>
+            <label for="course">Select Course</label>
 
-        <br><br>
+            <select id="course" name="course">
 
-        <input type="submit" value="Register">
+                <option>Private Pilot License (PPL)</option>
 
-    </form>
+                <option>Commercial Pilot License (CPL)</option>
+
+                <option>Air Transport Pilot License (ATPL)</option>
+
+                <option>Aircraft Maintenance Engineering</option>
+
+                <option>Air Traffic Control</option>
+
+                <option>Flight Dispatch Operations</option>
+
+            </select>
+
+            <label for="experience">Previous Experience</label>
+
+            <textarea
+                id="experience"
+                name="experience"
+                rows="5"
+                placeholder="Tell us about your education or aviation experience (optional)"></textarea>
+
+            <input type="submit" value="Register Now">
+
+        </form>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Aviation Training Academy | Nairobi, Kenya</p>
+    </footer>
 
 </body>
+
 </html>
